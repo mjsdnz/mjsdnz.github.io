@@ -48,8 +48,6 @@
   <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
   
   
-    <link rel="stylesheet" href="/vendors/aplayer@1.10.1/dist/APlayer.min.css"></script>
-  
   
     <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
   
@@ -78,6 +76,29 @@
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
                                     
+                                        <li>
+                                            
+                                                <a href="/">
+                                            
+                                                
+                                                    <i class="fa fa-home"></i>
+                                                
+                                                首页
+                                            </a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="/archives/">
+                                            
+                                                
+                                                    <i class="fa fa-file"></i>
+                                                
+                                                文章
+                                            </a>
+                                            
+                                        </li>
                                     
                                 
                             </ul>
@@ -344,7 +365,7 @@
     </div>
 </div>
 <footer>
-    <div id="footer"  class="ap-lrc"  >
+    <div id="footer"  >
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
@@ -365,7 +386,7 @@
                     <ul class="kratos-copyright">
                         <div>
                             <li>&copy; 2023 没进水的脑子的博客小站 版权所有.</li>
-                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                            <li>莫名其妙的时间<span id="span_dt">Loading...</span></li>
                         </div>
                         <div>
                             <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
@@ -398,6 +419,10 @@
                     </div>
                 
                 
+                    <div class="box theme-box" id="snow-switch">
+                        <span class="fa fa-snowflake-o"></span>
+                    </div>
+                
                 
             </div>
             <div class="box gotop-box">
@@ -419,22 +444,14 @@
     window.kr.siteRoot = "/";
 </script>
 
+    <div>
+        <canvas id="snow"></canvas>
+        <script async src="/js/snow.min.js"></script>
+    </div>
+
 
     <script async src="/js/candy.min.js"></script>
 
-
-
-    <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    
-    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
-    <meting-js
-        server="netease"
-        type="playlist"
-        id="3204190542"
-        order="random"
-        fixed="true"
-    >
-    </meting-js>
 
 
 
@@ -443,7 +460,7 @@
 <script defer src="/js/kratosr.min.js"></script>
 <script defer src="/js/pjax.min.js"></script>
 
-
+劳累程度
 
 <!-- Extra support for third-party plguins  -->
 
