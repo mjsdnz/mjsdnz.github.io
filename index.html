@@ -289,7 +289,8 @@ mjx-container[display="true"] + br {
                     <div class="kratos-entry-content-new">
                         <p itemProp="description">
                             
-                                
+                                李超线段树学习笔记引入李超线段树是一种解决解决二维平面直角坐标系中直线和线段的最值问题的数据结构，支持动态插入线段，查询某一横坐标上值最大(或最小)的直线标号或值的数据结构。
+思想首先想想暴力，也就是枚举一遍所有线段，复杂度 。但是很...
                             
                         </p>
                     </div>
@@ -1075,5 +1076,21 @@ mjx-container[display="true"] + br {
 <!-- Extra support for third-party plguins  -->
 
 
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>
