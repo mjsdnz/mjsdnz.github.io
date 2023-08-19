@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   
   
-  <title>挖坑表 | 没进水的脑子</title>
+  <title>子集容斥与二项式反演学习笔记 | 没进水的脑子</title>
   
   <meta name="author" content="没进水的脑子" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -17,15 +17,15 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="天坑列表  [X] 有源汇上下界最大流 [x] noip往年题目部分思路(持续更新) [x] 数据结构小结 [ ] 高等数学 [ ] 线段树题目讲解 [ ] 分块9题讲解 [ ] 平衡树题目讲解 [ ] 线性规划入门">
+  <meta name="description" content="原地址  子集容斥与二项式反演学习笔记子集容斥公式：  \begin{align*} g(S)&amp;&#x3D;\sum\limits_{T\subseteq S}f(T)\\ f(S)&amp;&#x3D;\sum\limits_{T\subseteq S}(-1)^{\left|S\right|-\left|T\right|}g(T) \end{align*}证明：  \begin{align*}     &amp;\sum\li">
 <meta property="og:type" content="article">
-<meta property="og:title" content="挖坑表">
-<meta property="og:url" content="http://example.com/2023/08/16/%E6%8C%96%E5%9D%91%E8%A1%A8/index.html">
+<meta property="og:title" content="子集容斥与二项式反演学习笔记">
+<meta property="og:url" content="http://example.com/2023/08/19/%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="没进水的脑子">
-<meta property="og:description" content="天坑列表  [X] 有源汇上下界最大流 [x] noip往年题目部分思路(持续更新) [x] 数据结构小结 [ ] 高等数学 [ ] 线段树题目讲解 [ ] 分块9题讲解 [ ] 平衡树题目讲解 [ ] 线性规划入门">
+<meta property="og:description" content="原地址  子集容斥与二项式反演学习笔记子集容斥公式：  \begin{align*} g(S)&amp;&#x3D;\sum\limits_{T\subseteq S}f(T)\\ f(S)&amp;&#x3D;\sum\limits_{T\subseteq S}(-1)^{\left|S\right|-\left|T\right|}g(T) \end{align*}证明：  \begin{align*}     &amp;\sum\li">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-08-16T11:16:24.980Z">
-<meta property="article:modified_time" content="2023-08-18T01:56:20.009Z">
+<meta property="article:published_time" content="2023-08-19T13:24:03.865Z">
+<meta property="article:modified_time" content="2023-08-19T13:25:46.411Z">
 <meta property="article:author" content="没进水的脑子">
 <meta name="twitter:card" content="summary">
   
@@ -268,15 +268,15 @@ mjx-container[display="true"] + br {
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/16/%E6%8C%96%E5%9D%91%E8%A1%A8/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/19/%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">挖坑表</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">子集容斥与二项式反演学习笔记</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2023-08-16T11:16:24.980Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-08-16</time></li>
+                <li><time datetime="2023-08-19T13:24:03.865Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-08-19</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">没进水的脑子</span>
                 </li>
@@ -285,7 +285,7 @@ mjx-container[display="true"] + br {
                         <i class="fa fa-edit"></i> 
                         
                         
-                            112
+                            1372
                         
                         字
                     </li>
@@ -297,29 +297,57 @@ mjx-container[display="true"] + br {
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1692323780009"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1692451546411"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A9%E5%9D%91%E5%88%97%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">天坑列表</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">子集容斥与二项式反演学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5"><span class="toc-number">1.1.</span> <span class="toc-text">子集容斥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94"><span class="toc-number">1.2.</span> <span class="toc-text">二项式反演</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">例题：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%91%E6%9A%97%E5%89%8D%E7%9A%84%E5%B9%BB%E6%83%B3%E4%B9%A1"><span class="toc-number">1.3.1.</span> <span class="toc-text">黑暗前的幻想乡</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F%EF%BC%9A"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">题目大意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">前置知识：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">思路</span></a></li></ol></li></ol></li></ol></li></ol>
                 </div>
             
             <hr />
-            <div itemprop="articleBody"><h1 id="天坑列表"><a href="#天坑列表" class="headerlink" title="天坑列表"></a>天坑列表</h1><ul>
-<li><ul>
-<li>[X] <a target="_blank" rel="noopener" href="https://mjsdnz.github.io/2023/08/16/%E6%9C%89%E6%BA%90%E6%B1%87%E4%B8%8A%E4%B8%8B%E7%95%8C%E6%9C%80%E5%A4%A7%E6%B5%81/">有源汇上下界最大流</a></li>
-<li>[x] <a target="_blank" rel="noopener" href="https://mjsdnz.github.io/2023/08/16/noip%E5%BE%80%E5%B9%B4%E9%A2%98%E7%9B%AE%E9%83%A8%E5%88%86%E6%80%9D%E8%B7%AF/">noip往年题目部分思路</a>(持续更新)</li>
-<li>[x] <a target="_blank" rel="noopener" href="https://mjsdnz.github.io/2023/06/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%B0%8F%E7%BB%93/">数据结构小结</a></li>
-<li>[ ] 高等数学</li>
-<li>[ ] 线段树题目讲解</li>
-<li>[ ] 分块9题讲解</li>
-<li>[ ] 平衡树题目讲解</li>
-<li>[ ] 线性规划入门</li>
+            <div itemprop="articleBody"><ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mjsdnz/p/17565236.html">原地址</a></li>
 </ul>
-</li>
+<h1 id="子集容斥与二项式反演学习笔记"><a href="#子集容斥与二项式反演学习笔记" class="headerlink" title="子集容斥与二项式反演学习笔记"></a>子集容斥与二项式反演学习笔记</h1><h2 id="子集容斥"><a href="#子集容斥" class="headerlink" title="子集容斥"></a>子集容斥</h2><p>公式：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+g(S)&=\sum\limits_{T\subseteq S}f(T)\\
+f(S)&=\sum\limits_{T\subseteq S}(-1)^{\left|S\right|-\left|T\right|}g(T)
+\end{align*}</script><p>证明：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+    &\sum\limits_{T\subseteq S}(-1)^{\left|S\right|-\left|T\right|}g(T)\\
+    =&\sum\limits_{T\subseteq S}(-1)^{\left|S\right|-\left|T\right|}\sum\limits_{R\subseteq T}f(R)\\
+    =&\sum\limits_{R\subseteq T}f(R)\sum\limits_{R\subseteq T\subseteq S}(-1)^{\left|S\right|-\left|T\right|}
+\end{align*}</script><p>若 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="6.194ex" height="1.781ex" role="img" focusable="false" viewbox="0 -705 2737.6 787"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"/></g><g data-mml-node="mo" transform="translate(1036.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(2092.6,0)"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"/></g></g></g></svg></mjx-container>，则 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -2.518ex;" xmlns="http://www.w3.org/2000/svg" width="20.031ex" height="4.539ex" role="img" focusable="false" viewbox="0 -893 8853.7 2006.1"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="munder"><g data-mml-node="mo" transform="translate(767.4,0)"><path data-c="2211" d="M61 748Q64 750 489 750H913L954 640Q965 609 976 579T993 533T999 516H979L959 517Q936 579 886 621T777 682Q724 700 655 705T436 710H319Q183 710 183 709Q186 706 348 484T511 259Q517 250 513 244L490 216Q466 188 420 134T330 27L149 -187Q149 -188 362 -188Q388 -188 436 -188T506 -189Q679 -189 778 -162T936 -43Q946 -27 959 6H999L913 -249L489 -250Q65 -250 62 -248Q56 -246 56 -239Q56 -234 118 -161Q186 -81 245 -11L428 206Q428 207 242 462L57 717L56 728Q56 744 61 748Z"/></g><g data-mml-node="TeXAtom" transform="translate(0,-915.5) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"/></g><g data-mml-node="mo" transform="translate(759,0)"><path data-c="2286" d="M84 346Q84 468 166 546T360 635Q361 635 370 635T395 635T430 636T475 636T524 636H679Q694 628 694 616Q694 607 681 597L522 596H470H441Q366 596 338 592T266 568Q244 557 224 542T179 500T139 433T124 346V341Q124 253 185 185Q244 121 328 103Q348 98 366 98T522 96H681Q694 86 694 76Q694 64 679 56H526Q510 56 480 56T434 55Q350 55 289 71T172 141Q84 223 84 346ZM104 -131T104 -118T118 -98H679Q694 -106 694 -118T679 -138H118Q104 -131 104 -118Z"/></g><g data-mml-node="mi" transform="translate(1537,0)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"/></g><g data-mml-node="mo" transform="translate(2241,0)"><path data-c="2286" d="M84 346Q84 468 166 546T360 635Q361 635 370 635T395 635T430 636T475 636T524 636H679Q694 628 694 616Q694 607 681 597L522 596H470H441Q366 596 338 592T266 568Q244 557 224 542T179 500T139 433T124 346V341Q124 253 185 185Q244 121 328 103Q348 98 366 98T522 96H681Q694 86 694 76Q694 64 679 56H526Q510 56 480 56T434 55Q350 55 289 71T172 141Q84 223 84 346ZM104 -131T104 -118T118 -98H679Q694 -106 694 -118T679 -138H118Q104 -131 104 -118Z"/></g><g data-mml-node="mi" transform="translate(3019,0)"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"/></g></g></g><g data-mml-node="mo" transform="translate(2590.8,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"/></g><g data-mml-node="mo" transform="translate(2979.8,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mn" transform="translate(3757.8,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g><g data-mml-node="msup" transform="translate(4257.8,0)"><g data-mml-node="mo"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"/></g><g data-mml-node="TeXAtom" transform="translate(422,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mrow"><g data-mml-node="mo" transform="translate(0 -0.5)"><path data-c="7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"/></g><g data-mml-node="mi" transform="translate(278,0)"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"/></g><g data-mml-node="mo" transform="translate(923,0) translate(0 -0.5)"><path data-c="7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"/></g></g><g data-mml-node="mo" transform="translate(1201,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mrow" transform="translate(1979,0)"><g data-mml-node="mo" transform="translate(0 -0.5)"><path data-c="7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"/></g><g data-mml-node="mi" transform="translate(278,0)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"/></g><g data-mml-node="mo" transform="translate(982,0) translate(0 -0.5)"><path data-c="7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"/></g></g></g></g><g data-mml-node="mo" transform="translate(7297.9,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mn" transform="translate(8353.7,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g></g></g></svg></mjx-container>。</p>
+<h2 id="二项式反演"><a href="#二项式反演" class="headerlink" title="二项式反演"></a>二项式反演</h2><p>公式：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+g_{i}&=\sum_{k\ge i}\dbinom{k}{i}f_k\\
+f_{i}&=\sum_{k\ge i}\dbinom{k}{i}(-1)^{k-i}g_k
+\end{align*}</script><p>证明：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+&\sum_{k\ge i}\dbinom{k}{i}(-1)^{k-i}g_k\\
+=&\sum_{k\ge i}\dbinom{k}{i}(-1)^{k-i}\sum_{j\ge k}\dbinom{j}{k}f_j\\
+=&\sum_{j\ge i}f_j\sum_{i\le k \le j}\dbinom{k}{i}\dbinom{j}{k}(-1)^{k-i}\\
+=&\sum_{j\ge i}f_j\sum_{i \le k \le j}\frac{k!}{i!(k-i)!}\frac{j!}{k!(j-k)!}(-1)^{k-i}\\
+=&\sum_{j\ge i}f_j\frac{j!}{i!}\sum_{i \le k \le j}\frac{1}{(k-i)!(j-k)!}(-1)^{k-i}\\
+=&\sum_{j\ge i}f_j\frac{j!}{i!(j-i)!}(1-1)^{k-i}\\
+=&f_j
+\end{align*}</script><p>同理：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+    g_i&=\sum_{k\le i}\dbinom{i}{k}f_k\\
+    f_i&=\sum_{k\le i}\dbinom{i}{k}(-1)^{i-k}g_k
+\end{align*}</script><h2 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h2><h3 id="黑暗前的幻想乡"><a href="#黑暗前的幻想乡" class="headerlink" title="黑暗前的幻想乡"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4336">黑暗前的幻想乡</a></h3><h4 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h4><p>给定一个无向图和每个公司能造的边，要求统计每个公司恰好建造一条边的生成树数量。</p>
+<h4 id="前置知识："><a href="#前置知识：" class="headerlink" title="前置知识："></a>前置知识：</h4><ul>
+<li>[ ] 子集容斥</li>
+<li>[ ] 矩阵树定理（生成树计数）</li>
 </ul>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>在没有公司限制的情况下，我们只需要跑一边生成树计数即可（挖个坑）。在加上限制条件之后，我们可以考虑将参加建造的公司看成一个子集 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.023ex;" xmlns="http://www.w3.org/2000/svg" width="1.061ex" height="1.023ex" role="img" focusable="false" viewbox="0 -442 469 452"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"/></g></g></g></svg></mjx-container>，求出每个子集对应的生成树数量 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="2.047ex" height="2.059ex" role="img" focusable="false" viewbox="0 -705 904.6 910"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"/></g><g data-mml-node="mi" transform="translate(523,-150) scale(0.707)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"/></g></g></g></g></svg></mjx-container> ，最后子集容斥即可。</p>
 </div>
         </div>
         
@@ -369,7 +397,7 @@ mjx-container[display="true"] + br {
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2023/08/16/%E6%8C%96%E5%9D%91%E8%A1%A8/",
+                text: "http://example.com/2023/08/19/%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -381,22 +409,16 @@ mjx-container[display="true"] + br {
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2023/08/16/%E6%8C%96%E5%9D%91%E8%A1%A8/";
-            const title         = "「挖坑表」";
-            const excerpt       = `天坑列表
+            const hostUrl       = "http://example.com/2023/08/19/%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/";
+            const title         = "「子集容斥与二项式反演学习笔记」";
+            const excerpt       = `
+原地址
 
-[X] 有源汇上下界最大流
-[x] noip往年题目部分思路(持续更新)
-[x] 数据结构小结
-[ ] 高等数学
-[ ] 线段树题目讲解
-[ ] 分块9题讲解
-[ ] 平衡树题目讲解
-[ ] 线性规划入门
+子集容斥与二项式反演学习笔记子集容斥公式：
 
-
-
-`;
+\begin{align*}
+g(S)&=\sum\limits_{T\subseteq S}f(T)\\
+f(S)&=\sum\limits_{T\subseteq S}(-...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -418,7 +440,7 @@ mjx-container[display="true"] + br {
                     
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-08-18T01:56:20.009Z" itemprop="dateModified">最后编辑：2023-08-18</time>
+                    <time datetime="2023-08-19T13:25:46.411Z" itemprop="dateModified">最后编辑：2023-08-19</time>
                 </div>
             </div>
         </footer>
@@ -427,13 +449,9 @@ mjx-container[display="true"] + br {
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" P2934题解" href="/2023/08/16/P2934题解/">&lt; 上一篇</a>
+                <a title=" 组合数学学习笔记" href="/2023/08/19/组合数学学习笔记/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" 有源汇上下界最大流" href="/2023/08/16/有源汇上下界最大流/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
@@ -501,7 +519,7 @@ mjx-container[display="true"] + br {
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A9%E5%9D%91%E5%88%97%E8%A1%A8"><span class="toc-text">天坑列表</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-text">子集容斥与二项式反演学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E9%9B%86%E5%AE%B9%E6%96%A5"><span class="toc-text">子集容斥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94"><span class="toc-text">二项式反演</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98%EF%BC%9A"><span class="toc-text">例题：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%91%E6%9A%97%E5%89%8D%E7%9A%84%E5%B9%BB%E6%83%B3%E4%B9%A1"><span class="toc-text">黑暗前的幻想乡</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F%EF%BC%9A"><span class="toc-text">题目大意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="toc-text">前置知识：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </aside>
                 
