@@ -20,11 +20,11 @@
   <meta name="description" content="更高效的网络流算法前言填坑，介绍一种更高效的网络最大流算法HPLL（预留推进） HPLL算法在上一篇文章中，我们介绍了三种最大流算法：Edmonds-Karp、Dinic和ISAP，其中最优的复杂度为(ISAP)。但这样还不够，ISAP仍有改进的空间，于是乎出现了HPLL算法，其复杂度为。 思路和ISAP类似，我们可以从汇点T开始BFS，查找到每一个结点的高度，然后每次搜索只更新到高度为当前节点减">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络流拓展——HLPP算法">
-<meta property="og:url" content="http://example.com/2023/05/09/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:url" content="http://example.com/2023/08/16/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="没进水的脑子">
 <meta property="og:description" content="更高效的网络流算法前言填坑，介绍一种更高效的网络最大流算法HPLL（预留推进） HPLL算法在上一篇文章中，我们介绍了三种最大流算法：Edmonds-Karp、Dinic和ISAP，其中最优的复杂度为(ISAP)。但这样还不够，ISAP仍有改进的空间，于是乎出现了HPLL算法，其复杂度为。 思路和ISAP类似，我们可以从汇点T开始BFS，查找到每一个结点的高度，然后每次搜索只更新到高度为当前节点减">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-09T10:54:42.678Z">
+<meta property="article:published_time" content="2023-08-16T11:16:24.983Z">
 <meta property="article:modified_time" content="2023-06-12T06:46:35.016Z">
 <meta property="article:author" content="没进水的脑子">
 <meta name="twitter:card" content="summary">
@@ -268,7 +268,7 @@ mjx-container[display="true"] + br {
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/09/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/16/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
@@ -276,7 +276,7 @@ mjx-container[display="true"] + br {
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2023-05-09T10:54:42.678Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-05-09</time></li>
+                <li><time datetime="2023-08-16T11:16:24.983Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2023-08-16</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">没进水的脑子</span>
                 </li>
@@ -377,7 +377,7 @@ mjx-container[display="true"] + br {
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2023/05/09/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/",
+                text: "http://example.com/2023/08/16/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -389,7 +389,7 @@ mjx-container[display="true"] + br {
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2023/05/09/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/";
+            const hostUrl       = "http://example.com/2023/08/16/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94HLPP%E7%AE%97%E6%B3%95/";
             const title         = "「网络流拓展——HLPP算法」";
             const excerpt       = `更高效的网络流算法前言填坑，介绍一种更高效的网络最大流算法HPLL（预留推进）
 HPLL算法在上一篇文章中，我们介绍了三种最大流算法：Edmonds-Karp、Dinic和ISAP，其中最优的复杂度为(ISAP)。但这样还不够，ISA...`;
@@ -423,12 +423,12 @@ HPLL算法在上一篇文章中，我们介绍了三种最大流算法：Edmonds
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 网络流" href="/2023/05/05/网络流/">&lt; 上一篇</a>
+                <a title=" 数据结构小结" href="/2023/08/16/数据结构小结/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" 最小费用最大流" href="/2023/05/11/最小费用最大流/">下一篇 &gt;</a>
+                <a title=" 最小费用最大流" href="/2023/08/16/最小费用最大流/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -544,7 +544,7 @@ HPLL算法在上一篇文章中，我们介绍了三种最大流算法：Edmonds
         
           
           
-            <a class="list-group-item" href="/2023/08/16/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E5%85%A5%E9%97%A8/"><i class="fa  fa-book"></i> 线性规划入门</a>
+            <a class="list-group-item" href="/2023/08/16/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/"><i class="fa  fa-book"></i> 高等数学</a>
             
           
         
